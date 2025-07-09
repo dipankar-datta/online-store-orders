@@ -1,9 +1,5 @@
 databaseChangeLog:
   - include:
-      file: db/changelog/1-create-role-table.json
+      file: db/changelog/1-create-orders-table.json
   - include:
-      file: db/changelog/2-create-user-table.json
-  - include:
-      file: db/changelog/3-create-user-role-table.json
-  - include:
-      file: db/changelog/4-create-credential-table.json
+      file: db/changelog/2-create-order-item-table.json

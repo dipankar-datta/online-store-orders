@@ -11,7 +11,7 @@ import static com.dipankar.onlinestore.orders.util.CommonUtil.convertList;
 
 public class EntityToResponseConverter {
 
-    public static OrderItemResponse toOrderItemResponse(OrderItem orderItem) {
+    static OrderItemResponse toOrderItemResponse(OrderItem orderItem) {
         OrderItemResponse response = new OrderItemResponse();
         copyProperties(orderItem, response);
         return response;

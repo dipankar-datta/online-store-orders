@@ -10,7 +10,7 @@ import static org.springframework.beans.BeanUtils.copyProperties;
 
 public class RequestToEntityConverter {
 
-    public static OrderItem toOrderItem(OrderItemRequest request) {
+    static OrderItem toOrderItem(OrderItemRequest request) {
         OrderItem orderItem = new OrderItem();
         copyProperties(request, orderItem);
         return orderItem;
