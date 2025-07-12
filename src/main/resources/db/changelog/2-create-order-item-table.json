@@ -3,7 +3,7 @@
     {
       "changeSet": {
         "id": "2-create-order-item-table",
-        "author": "qodo",
+        "author": "online-store-orders",
         "changes": [
           {
             "createTable": {
