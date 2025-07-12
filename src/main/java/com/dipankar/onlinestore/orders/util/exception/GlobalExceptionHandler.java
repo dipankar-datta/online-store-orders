@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.WebRequest;
 
-import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -33,7 +32,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public ResponseEntity<Object> handleOtherExceptions(Exception ex, WebRequest request) {
-        LocalDateTime localDateTime = now();
+        String localDateTime = now().toString();
         log.error("Exception occurred with timestamp: {}",localDateTime, ex);
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("timestamp", localDateTime);

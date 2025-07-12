@@ -2,6 +2,7 @@ package com.dipankar.onlinestore.orders.service;
 
 import com.dipankar.onlinestore.orders.data.entities.Order;
 import com.dipankar.onlinestore.orders.data.repository.OrderRepository;
+import com.dipankar.onlinestore.orders.util.Constants;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,6 +19,7 @@ public class OrderService {
     @Transactional
     public Order saveOrder(Order order) {
         order.setOrderDate(LocalDateTime.now());
+        order.setStatus(Constants.Orders.NEW);
         return orderRepository.save(order);
     }
 

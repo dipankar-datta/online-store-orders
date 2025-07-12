@@ -1,4 +1,4 @@
-package com.dipankar.onlinestore.orders.rest.dto.controller;
+package com.dipankar.onlinestore.orders.rest.controller;
 
 import com.dipankar.onlinestore.orders.data.entities.Order;
 import com.dipankar.onlinestore.orders.rest.dto.request.OrderRequest;
@@ -63,7 +63,7 @@ public class OrderController {
         return convertList(orders, EntityToResponseConverter::toOrderResponse);
     }
 
-    @GetMapping("/customer/{id}")
+    @GetMapping("/customer/{customerId}")
     @ResponseStatus(HttpStatus.OK)
     public List<OrderResponse> getOrdersByCustomerId(@PathVariable Long customerId) {
         List<Order> orders = orderService.getOrderByCustomerId(customerId);

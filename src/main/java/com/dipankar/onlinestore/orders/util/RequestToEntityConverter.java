@@ -20,6 +20,7 @@ public class RequestToEntityConverter {
         Order order = new Order();
         copyProperties(request, order);
         order.setOrderItems(convertList(request.getOrderItems(), RequestToEntityConverter::toOrderItem));
+        order.getOrderItems().forEach(orderItem -> orderItem.setOrder(order));
         return order;
     }
 }
