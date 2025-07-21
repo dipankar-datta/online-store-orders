@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  app:
+    image: online-store-orders # Replace with your actual image name
+    environment:
+      - DB_URL=${SPRING_DATASOURCE_URL}
+      - DB_USERNAME=${SPRING_DATASOURCE_USERNAME}
+      - DB_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+    ports:
+      - "8083:8083"
+  
